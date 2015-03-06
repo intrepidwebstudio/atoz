@@ -1,41 +1,669 @@
-<!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mobile Application</title>
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
 
-    http://www.apache.org/licenses/LICENSE-2.0
 
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>AtoZ</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+</head>
+<body>
+<!--------------------Registration Page---------------->
+<div data-role="page" id="index" data-title="AtoZRestaurant">
+    <!-- /header -->
+    <div data-role="header" data-position="fixed" data-theme="b" style="background-color:#000; color:#FFF;">
+        <h1>Registration</h1>
+        <!--<a href="#nav-panel1" data-icon="bars" data-iconpos="notext">Menu</a>
+        <a href="#add-form1" data-icon="back" data-iconpos="notext">Add</a>-->
+    </div>	
+    <!-- /header -->
+    <!--content--->
+  	<div data-role="content" style="margin-top:2px;margin-left:2px; margin-right:2px; background-image:url(images/gallery/b1.png);">
+    	
+        <div class="container no-bottom">
+            <div class="decoration"></div>
+            <h3 class="center-text" style="color:white; margin-top:8px; text-align:center">User Registration Page</h3>
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+        <form  method="post" class="contactForm" id="contactForm">
+            <fieldset>
+               
+                <div class="ui-field-contain " style="left:12%; width:75%; margin-top:20px;">
+                    <!--<label for="textinput-fc" style="color:white;">User Name</label>-->
+                    <input name="textinput-fc" id="textinput-fc" placeholder="User Name" value="" type="text" style="background-color:#866649; color:white;">
+                </div>
+                <div class="ui-field-contain" style="left:12%; width:75%; margin-top:-25px;">
+                    <!--<label for="textinput-fc" style="color:white;">Mobile Number</label>-->
+                    <input name="textinput-fc" id="textinput-fc" placeholder="Mobile Number" value="" type="text" style="background-color:#866649; color:white;">
+                </div>
+                <div class="ui-field-contain" style="left:12%; width:75%; margin-top:-25px;">
+                   <!-- <label for="select-native-fc" style="color:white;">Company Name</label>-->
+                    <select name="select-native-fc" id="" style="background-color:#866649; color:white;">
+                        <option value="">Company Name</option>
+                        <option value="small">IBM</option>
+                        <option value="medium">The Valai</option>
+                        <option value="large">Seyon Infotech</option>
+                        <option value="small">Vishaka</option>
+                        <option value="medium">Spiro</option>
+                        <option value="large">HCL</option>
+                    </select>
+                 </div>
+                 <div class="ui-field-contain" style="left:12%; width:75%; margin-top:-25px;">
+                   <!-- <label for="select-native-fc" style="color:white;" style="opacity:0.6;">Company Location</label>-->
+                    <select name="select-native-fc" id="select-native-fc" >
+                        <option value="">Company Location</option>
+                        <option value="small">Porur</option>
+                        <option value="medium">Vadapalani</option>
+                        <option value="large">Saidapet</option>
+                        <option value="small">T.Nager</option>
+                        <option value="medium">Velachery</option>
+                        <option value="large">Mylapore</option>
+                    </select>
+                </div>
+                <div style="left:12%; width:75%;">
+                    <a data-role="button" href="#home" role="button" style="background-color:#866649; color:white; margin-left:36px;width:86%">Login</a>	
+                   
+                </div>
+            </fieldset>
+         </form>
+    </div>
+</div>
+<!--------------------/Registration Page---------------->
+<!--------------------Home----------------------------->
+<div  data-role="page" id="home" data-title="AtoZRestaurant">
+    <!-- /header -->
+    <div data-role="header" data-position="fixed" data-theme="b" style="background-color:#000; color:#FFF;">
+        <h1>Home Page</h1>
+        <!--<a href="#nav-panel1" data-icon="bars" data-iconpos="notext">Menu</a>
+        <a href="#add-form1" data-icon="back" data-iconpos="notext">Add</a>-->
+    </div>	
+    <!-- /header -->
+    <!--content--->
+  	<div data-role="content" style="margin-top:2px;margin-left:2px; margin-right:2px; background-image:url(images/gallery/b1.png);">
+     	<div class="ui-content" style="margin-left:-30px;">
+            <a href="#" class="homepage-logo">
+                <img src="images/gallery/logo1.png" alt="img" style="height:105px; margin-left:104px;">
+            </a>
+ 		</div>       
+       	<div class="ui-content" style="margin-top:50px;">
+          	<a href="#place_order1"  data-transition="fade"><img class="popphoto" src="images/gallery/place.png" alt="Paris, France" style="width:40%; margin-left:20px;"></a>
+            <a href="#" data-transition="fade"><img class="popphoto"src="images/gallery/track.png" alt="Sydney, Australia" style="width:40%; margin-left:20px;"></a>
+            <a href="#Order_history"  data-transition="fade"><img class="popphoto" src="images/gallery/order.png" alt="New York, USA" style="width:40%; margin-left:20px;"></a>
+            
+            <a href="#Setting"  data-transition="fade"><img class="popphoto" src="images/gallery/setting.png" alt="Paris, France" style="width:40%; margin-left:20px;"></a>
+            <a href="#popupSydney" data-transition="fade"><img class="popphoto"src="images/gallery/privacy.png" alt="Sydney, Australia" style="width:40%; margin-left:20px;"></a>
+            <a href="#Cart_page"  data-transition="fade"><img class="popphoto" src="images/gallery/cart.png" alt="New York, USA" style="width:40%; margin-left:20px;"></a>
+           
+        </div>
+    </div>
+</div>
+<!--------------------/Home----------------------------->
+<!--------------------First Page end------------------->
+<div data-role="page" id="place_order1" data-title="AtoZRestaurant">
+    <!-- /header -->
+    <div data-role="header" data-position="fixed" data-theme="b" style="background-color:#000; color:#FFF;">
+        <h1>Place Order</h1>
+        <a href="#panel1" data-icon="bars" data-iconpos="notext">Menu</a>
+        <a href="#home" data-icon="back" data-iconpos="notext">Add</a>
+    </div>	
+    <!-- /header -->
+    <!--content--->
+  	<div data-role="content" style="margin-top:2px;margin-left:2px; margin-right:2px; background-image:url(images/gallery/b1.png);">
+    	<div class="container no-bottom">
+            <div class="decoration"></div>
+            <h3 class="center-text" style="color:white; margin-top:8px; text-align:center">Place Order Pages</h3>
+          
+        </div>
+           
+        <form  method="post" class="contactForm" id="contactForm">
+            <fieldset>
+                <div class="ui-field-contain" style="left:10%; width:75%;">
+                    <!--<label for="textinput-fc" style="color:white;">Delivery date</label>-->
+                    <input name="textinput-fc" id="textinput-fc" placeholder="Delivery Date" value="" type="text" style="background-color:#866649; color:white;">
+                </div>
+                <div class="ui-field-contain" style="left:10%; width:75%; margin-top:-31px;">
+                    <!--<label for="select-native-fc" style="color:white;">Delivery time</label>-->
+                    <select name="select-native-fc" id="select-native-fc">
+                        <option value="small">Delivery Time</option>
+                        <option value="small">12:23</option>
+                        <option value="medium">11:15</option>
+                        <option value="large">10:53</option>
+                        <option value="small">12:23</option>
+                        <option value="medium">11:15</option>
+                        <option value="large">10:53</option>
+                    </select>
+                </div>
+                
+                   <a data-role="button" href="#menu" role="button" style="background-color:#866649; color:white; margin-left:29px;width:63%; margin-top:-12px;">Proceed</a>
+               
+            </fieldset>
+        </form>
+            
+     
+    </div>
+	<!-- /content -->
+    
+    <div data-role="panel" data-display="push" data-theme="b" id="panel1">
+        <ul data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-right">Close</a></li>
+            <li><a href="#">Place Order</a></li>
+            <li><a href="#demo-page2">Track Order</a></li>
+            <li><a href="#Order_history">Order History</a></li>
+			<li><a href="#demo-page4">User Settings</a></li>
+       
+		</ul>
+    </div>
+  <!-- /panel -->
+</div>
+<!--------------------First Page end------------------->
+<!--------------------Menu--------------------------------->
+<div data-role="page" id="menu" data-title="AtoZRestaurant">
+    <!-- /header -->
+    <div data-role="header" data-position="fixed" data-theme="b" style="background-color:#000; color:#FFF;">
+        <h1>Menu Page</h1>
+        <a href="#panel2" data-icon="bars" data-iconpos="notext">Menu</a>
+        <a href="#place_order1" data-icon="back" data-iconpos="notext">Add</a>
+    </div>	
+    <!-- /header -->
+    <!--content--->
+  	<div data-role="content" style="margin-top:2px;margin-left:2px; margin-right:2px; background-image:url(images/gallery/b1.png);">
+		<h1 style="text-align:center; color:white; font-size:18px;">Menu Details Page</h1>
+        <form>
+          <fieldset data-role="collapsible" style="width:112%;margin-left:-16px;">
+               <legend style="background-color:#560817 !important;">Cuisine List</legend>
+               <div data-role="controlgroup">
+                    <input name="checkbox-1-a" id="checkbox-1-a" type="checkbox">
+                    <label for="checkbox-1-a"  style="background-color:#F5EEE4; color:black;">North Indian</label>
+                    <input name="checkbox-2-a" id="checkbox-2-a" type="checkbox">
+                    <label for="checkbox-2-a" style="background-color:#F5EEE4; color:black;">South Indian</label>
+                    <input name="checkbox-3-a" id="checkbox-3-a" type="checkbox">
+                    <label for="checkbox-3-a" style="background-color:#F5EEE4; color:black;">Chinese</label>
+                    <input name="checkbox-4-a" id="checkbox-4-a" type="checkbox">
+                    <label for="checkbox-4-a" style="background-color:#F5EEE4; color:black;">Andhara Food</label>
+                </div>
+               
+            </fieldset>
+        </form>
+        <form>
+            <fieldset data-role="collapsible"  style="width:112%;margin-left:-16px;">
+                <legend>Category List</legend>
+               
+                <div data-role="controlgroup">
+                    <input name="checkbox-5-a" id="checkbox-5-a" type="checkbox">
+                    <label for="checkbox-5-a" style="background-color:#F5EEE4; color:black;">Side dish</label>
+                    <input name="checkbox-6-a" id="checkbox-6-a" type="checkbox">
+                    <label for="checkbox-6-a" style="background-color:#F5EEE4; color:black;">Maincourse</label>
+                    <input name="checkbox-7-a" id="checkbox-7-a" type="checkbox">
+                    <label for="checkbox-7-a" style="background-color:#F5EEE4; color:black;">Dessert</label>
+                    <input name="checkbox-8-a" id="checkbox-8-a" type="checkbox">
+                    <label for="checkbox-8-a" style="background-color:#F5EEE4; color:black;">Beverages</label>
+                </div>
+            </fieldset>
+        </form>
+        <form>
+            <fieldset data-role="collapsible"  style="width:112%;margin-left:-16px;">
+                <legend>Food List</legend>
+               
+                <div data-role="controlgroup">
+                    <input name="checkbox-9-a" id="checkbox-9-a" type="checkbox">
+                    <label for="checkbox-9-a" style="background-color:green; color:white;">Veg</label>
+                    <input name="checkbox-10-a" id="checkbox-10-a" type="checkbox">
+                    <label for="checkbox-10-a" style="background-color:red; color:white;">NonVeg</label>
+                   
+                </div>
+            </fieldset>
+        </form>
+   <!--<label for="search" style="margin-top:10px;width:112%;margin-left:-16px;">Search Input</label>-->
+	
+            <ul data-role="listview" data-inset="true" data-filter="true">
+                <li><a href="menu_product1.html" style=" margin-top:-8px; height:75px;background-color:#ECDFCF;margin-left:-16px;margin-right:-16px;">
+                    <img src="images/gallery/briyani.png" class="ui-li-thumb" style="max-width:30%;max-height:100px;">
+                    <h2>Product 1</h2>
+                   <p style="font-size:16px;">Amount: &#2352; 120</p>
+                </a></li>
+                <li><a href="#" style="height:75px;margin-left:-16px;margin-right:-16px;">
+                    <img src="images/gallery/meals.png" class="ui-li-thumb" style="max-width:30%;max-height:100px;">
+                    <h2>Fullmeals</h2>
+                    <p style="font-size:16px;">Amount: &#2352; 140</p>
+    
+                </a></li>
+                <li><a href="#" style="height:75px;background-color:#ECDFCF;margin-left:-16px;margin-right:-16px;">
+                    <img src="images/gallery/chapathi.png" class="ui-li-thumb" style="max-width:30%;max-height:100px;">
+                    <h2>Chapathi</h2>
+                    <p style="font-size:16px;">Amount: &#2352; 60</p>
+    
+                </a></li>
+                <li><a href="#" style="height:75px;margin-left:-16px;margin-right:-16px;">
+                    <img src="images/gallery/parotta.png" class="ui-li-thumb" style="max-width:30%;max-height:100px;">
+                    <h2>Parotta</h2>
+                    <p style="font-size:16px;">Amount: &#2352; 70</p>
+                    
+                </a></li>
+                <li><a href="#" style="height:75px;background-color:#ECDFCF;margin-left:-16px;margin-right:-16px;">
+                    <img src="images/gallery/mini.png" class="ui-li-thumb" style="max-width:30%;max-height:100px;">
+                    <h2>Minimeals</h2>
+                    <p style="font-size:16px;">Amount: &#2352; 90</p>
+                   
+                </a></li>
+                <li><a href="#" style="height:75px;margin-left:-16px;margin-right:-16px;">
+                    <img src="images/gallery/fried.png" class="ui-li-thumb" style="max-width:30%;max-height:100px;">
+                    <h2>Friedrice</h2>
+                    <p style="font-size:16px;">Amount: &#2352; 80</p>
+                    
+                </a></li>
+               
+            </ul>
+       
+    </div>
+	<!-- /content -->
+    
+    <div data-role="panel" data-display="push" data-theme="b" id="panel2">
+        <ul data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-right">Close</a></li>
+            <li><a href="#place_order1">Place Order</a></li>
+            <li><a href="#demo-page2">Track Order</a></li>
+            <li><a href="#Order_history">Order History</a></li>
+			<li><a href="#demo-page4">User Settings</a></li>
+       
+		</ul>
+    </div>
+  <!-- /panel -->
+</div>
+<!--------------------Menu------------------------------>
+<!--------------------Detail Menu Page------------------------------>
+<div data-role="page" id="menu_product" data-title="AtoZRestaurant">
+    <!-- /header -->
+    <div data-role="header" data-position="fixed" data-theme="b" style="background-color:#000; color:#FFF;">
+        <h1>Biryani</h1>
+        <a href="#panel3" data-icon="bars" data-iconpos="notext">Menu</a>
+        <a href="#menu" data-icon="back" data-iconpos="notext">Add</a>
+    </div>	
+    <!-- /header -->
+    <!--content--->
+  	<div data-role="content" style="margin-top:2px;margin-left:2px; margin-right:2px; background-image:url(images/gallery/b1.png);">
+		<h1 style="text-align:center; margin-top:2px; color:white;">Biryani Details</h1>
+    
+        <div class="container no-bottom">
+            <div class="portfolio-item-full-width">
+                <a href="images/pictures/1.jpg">
+                    <img src="images/gallery/briyani.png" class="responsive-image" style="width:100%;">
+                </a>
+                <h4 style="color:white;">A full plate with Chicken biryani</h4>
+                <p style="color:white;">We like biryani a lot! We've optimized them to the extreme to make them work like a charm on mobiles!</p>
+            </div>
+           
+         </div>
+        <!-- <form id='myform1' method='POST' action='#'>
+            <input type='button' value='-'  style="width:50px; height:50px;"  />
+            <input type='text' name='quantity' value='0' class='qty1' />
+            <input type='button' value='+' class='qtyplus1' field='quantity' />
+        </form>-->
+         <p style="margin-left: 76px;  margin-top:0px; font-size:18px; color:white; font-size:20px;">Quantity</p>
+         <div  style="width:40%; margin-left:76px; margin-top:-20px; margin-bottom:-20px;">
+            <input name="number" pattern="[0-9]*" id="number-pattern" value="" type="number" style="background-color:#8D684D; color:white;">
+         </div>
+         <p style="text-align:center;  margin-top:20px; font-size:18px; color:white; font-size:20px;">Amount: &#2352; 120</p>
+         <div style="background-color:#F5EEE4;">
+            
+            <a data-theme="d" data-role="button" href="menu.html" role="button" style="background-color:#6A4936; color:white;">Addtocart</a>
+        </div>
+    </div>
+    
+	<!-- /content -->
+    
+    <div data-role="panel" data-display="push" data-theme="b" id="panel3">
+        <ul data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-right">Close</a></li>
+            <li><a href="#place_order1">Place Order</a></li>
+            <li><a href="#demo-page2">Track Order</a></li>
+            <li><a href="#Order_history">Order History</a></li>
+			<li><a href="#demo-page4">User Settings</a></li>
+       
+		</ul>
+    </div>
+  <!-- /panel -->
+</div>
+<!--------------------Detail Menu Page------------------------------>
+<!--------------------Order History Page------------------------------>
+<div  data-role="page"  id="Order_history" data-title="AtoZRestaurant">
+    <!-- /header -->
+    <div data-role="header" data-position="fixed" data-theme="b" style="background-color:#000; color:#FFF;">
+        <h1>Order History</h1>
+        <a href="#Order1" data-icon="bars" data-iconpos="notext">Menu</a>
+        <a href="#home" data-icon="back" data-iconpos="notext">Add</a>
+    </div>	
+    <!-- /header -->
+    <!--content--->
+  	<div data-role="content" style="margin-top:2px;margin-left:2px; margin-right:2px; background-image:url(images/gallery/b1.png);">
+        <p style="text-align:center; margin-top:2px; font-size:18px; color:white;">Order History List</p>
+       
+        <div data-role="controlgroup" data-filter="true" data-input="#filterControlgroup-input">
+            <a href="#Order_detail" class="ui-btn ui-shadow ui-corner-all" style="background-color:#ECDFCF; margin-left:-16px;margin-right:-16px;">ABC1 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;19/02/2015</a>
+            <a href="#" class="ui-btn ui-shadow ui-corner-all" style="margin-left:-16px;margin-right:-16px;">ABC2 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;21/02/2015</a>
+            <a href="#" class="ui-btn ui-shadow ui-corner-all" style="background-color:#ECDFCF;margin-left:-16px;margin-right:-16px;">ABC3 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;11/02/2015</a>
+            <a href="#" class="ui-btn ui-shadow ui-corner-all" style="margin-left:-16px;margin-right:-16px;">ABC4 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;19/01/2015</a>
+            <a href="#" class="ui-btn ui-shadow ui-corner-all" style="background-color:#ECDFCF;margin-left:-16px;margin-right:-16px;">ABC5 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;23/01/2015</a>
+            <a href="#" class="ui-btn ui-shadow ui-corner-all" style="margin-left:-16px;margin-right:-16px;">ABC6 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;29/01/2015</a>
+        </div>
+       
+    </div>
+    
+	<!-- /content -->
+    
+    <div data-role="panel" data-display="push" data-theme="b" id="Order1">
+        <ul data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-right">Close</a></li>
+            <li><a href="#place_order1">Place Order</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Order History</a></li>
+			<li><a href="#">User Settings</a></li>
+       
+		</ul>
+    </div>
+  <!-- /panel -->
+</div>
+<!-------------------/Order History Page------------------------------>
+<!--------------------Order Details Page------------------------------>
+<div data-role="page" id="Order_detail" data-title="AtoZRestaurant">
+    <!-- /header -->
+    <div data-role="header" data-position="fixed" data-theme="b" style="background-color:#000; color:#FFF;">
+        <h1>Order Details</h1>
+        <a href="#Detail1" data-icon="bars" data-iconpos="notext">Menu</a>
+        <a href="#menu" data-icon="back" data-iconpos="notext">Add</a>
+    </div>	
+    <!-- /header -->
+    <!--content--->
+  	<div data-role="content" style="margin-top:2px;margin-left:2px; margin-right:2px; background-image:url(images/gallery/b1.png);">
+        <p style="text-align:center; margin-top:2px; font-size:18px; color:white;">Order History List</p>
+           <ul data-role="listview" data-inset="true">
+                <a href="order_details.html" class="ui-btn ui-shadow ui-corner-all" style="background-color:#ECDFCF; margin-top:30px; margin-left:-16px;margin-right:-16px;">OrderId &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;ABC1</a>
+                <a href="#" class="ui-btn ui-shadow ui-corner-all" style="margin-top:-8px; margin-left:-16px;margin-right:-16px;">Orderdate &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;21/02/2015</a>
+                <li><a href="menu_product1.html" style="margin-top:-8px;height:84px;background-color:#ECDFCF;margin-left:-16px;margin-right:-16px;">
+                    <img src="images/gallery/briyani.png" class="ui-li-thumb" style="max-width:30%;max-height:112px;">
+                    <h2>Product 1</h2>
+                    <h2>Biryani</h2>
+                    <p>Amount: &#2352; 120</p>
+                </a></li>
+                <li><a href="#" style="margin-top:-8px;height:84px;margin-left:-16px;margin-right:-16px;">
+                    <img src="images/gallery/meals.png" class="ui-li-thumb" style="max-width:30%;max-height:112px;">
+                    <h2>Product 2</h2>
+                    <h2>Biryani</h2>
+                    <p>Amount: &#2352; 140</p>
+                </a></li>
+                <li><a href="#" style="margin-top:-8px;height:84px;background-color:#ECDFCF;margin-left:-16px;margin-right:-16px;">
+                    <img src="images/gallery/parotta.png" class="ui-li-thumb" style="max-width:30%;max-height:112px;">
+                    <h2>Product 3</h2>
+                    <h2>Biryani</h2>
+                    <p>Amount: &#2352; 60</p>
+                </a></li>
+                  
+            </ul>
+            <a href="#" class="ui-btn ui-shadow ui-corner-all" style="background-color:#ECDFCF; margin-top:-15px;margin-left:-16px;margin-right:-16px;">Total Amount: &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&#2352; 320</a>
+            <div>
+                <a href="order_history.html" class="ui-btn ui-btn-inline" style="background-color:green; color:white;">Vieworder</a>
+                <a href="#" class="ui-btn ui-btn-inline" style="background-color:red; color:white; float:right;">Reorder</a>
+            </div>
+    </div>	
+    
+	<!-- /content -->
+    
+    <div data-role="panel" data-display="push" data-theme="b" id="Detail1">
+        <ul data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-right">Close</a></li>
+            <li><a href="#place_order1">Place Order</a></li>
+            <li><a href="#demo-page2">Track Order</a></li>
+            <li><a href="#Order_history">Order History</a></li>
+			<li><a href="#demo-page4">User Settings</a></li>
+       
+		</ul>
+    </div>
+  <!-- /panel -->
+</div>
+<!--------------------/Order Details Page------------------------------>
+<!--------------------Setting Page------------------------------------>
+<div data-role="page"  id="Setting" data-title="AtoZRestaurant">
+    <!-- /header -->
+    <div data-role="header" data-position="fixed" data-theme="b" style="background-color:#000; color:#FFF;">
+        <h1>Setting</h1>
+        <a href="#setpanel" data-icon="bars" data-iconpos="notext">Menu</a>
+        <a href="#home" data-icon="back" data-iconpos="notext">Add</a>
+    </div>	
+    <!-- /header -->
+    <!--content--->
+  	<div class="content" style="margin-left:2px;margin-right:2px; background-image:url(images/gallery/b1.png);">
+	<p style="text-align:center; margin-top:2px; font-size:18px; color:white;">Account Information</p>    
+    <div class="decoration"></div>
+    	<a href="#edit_Setting" style="margin-left:115px; background-color:#F5EEE4; color:white; margin-top:-167px; background-color:#5E4D3A;" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-edit ui-btn-icon-left ui-btn-a">Edit</a>
+   		<form  method="post" class="contactForm" id="contactForm">
+            <fieldset>
+               
+                <div class="ui-field-contain"  style="left:10%; width:75%; margin-top:55px;">
+                    <label for="textinput-fc" style="color:white; font-size:20px;">Phone Number</label>
+                    <label for="textinput-fc" style="color:white; margin-top:25px;">+918950770730</label>
+                    <!--<input name="textinput-fc" id="textinput-fc" placeholder="Enter User name" value="" type="text">-->
+                </div>
+                <div class="ui-field-contain"  style="left:10%; width:75%;">
+                    <label for="select-native-fc" style="color:white; font-size:20px;">Company Name</label>
+                    <label for="textinput-fc" style="color:white; margin-top:25px;">Seyon Infotech</label>
+                </div>
+                 <div class="ui-field-contain"  style="left:10%; width:75%;">
+                    <label for="select-native-fc" style="color:white; font-size:20px;">Address</label>
+                    <label for="textinput-fc" style="color:white; margin-top:25px;">22/124,Mani Street,Porur.</label>
+                </div>
+              <!--  <div class="ui-content ui-body-a" data-theme="a" data-role="content" role="main">
+                    
+                    <a data-theme="d" data-role="button" href="home.html" role="button" style="background-color:#6A4936; color:white;">Login</a>
+                </div>-->
+            </fieldset>
+        </form>
+	</div>
+    <!-- /content -->
+    
+    <div data-role="panel" data-display="push" data-theme="b" id="setpanel">
+        <ul data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-right">Close</a></li>
+            <li><a href="#place_order1">Place Order</a></li>
+            <li><a href="#demo-page2">Track Order</a></li>
+            <li><a href="#Order_history">Order History</a></li>
+			<li><a href="#demo-page4">User Settings</a></li>
+       
+		</ul>
+    </div>
+  <!-- /panel -->
+</div>
+<!-------------------/Setting Page------------------------------------>
+
+<!--------------------Edit Setting Page------------------------------------>
+<div  data-role="page" id="edit_Setting" data-title="AtoZRestaurant">
+    <!-- /header -->
+    <div data-role="header" data-position="fixed" data-theme="b" style="background-color:#000; color:#FFF;">
+        <h1>Edit Setting</h1>
+        <a href="#setedit" data-icon="bars" data-iconpos="notext">Menu</a>
+        <a href="#Setting" data-icon="back" data-iconpos="notext">Add</a>
+    </div>	
+    <!-- /header -->
+    <!--content--->
+  	<div class="content" style="margin-left:2px;margin-right:2px; background-image:url(images/gallery/b1.png);">
+        <p style="text-align:center; margin-top:2px; font-size:18px; color:white;">Editable Account Information</p>    
+        
+        <div class="decoration"></div>
+            
+            <form  method="post" class="contactForm" id="contactForm">
+                <fieldset>
+                    <div class="ui-field-contain " style="left:12%; width:75%; margin-top:-20px;">
+                        <!--<label for="textinput-fc" style="color:white;">User Name</label>-->
+                        <input name="textinput-fc" id="textinput-fc" placeholder="Phone Number" value="" type="text" style="background-color:#866649; color:white;">
+                    </div>
+                    <div class="ui-field-contain" style="left:12%; width:75%; margin-top:-25px;">
+                       <!-- <label for="select-native-fc" style="color:white;">Company Name</label>-->
+                        <select name="select-native-fc" id="" style="background-color:#866649; color:white;">
+                            <option value="">Company Name</option>
+                            <option value="small">IBM</option>
+                            <option value="medium">The Valai</option>
+                            <option value="large">Seyon Infotech</option>
+                            <option value="small">Vishaka</option>
+                            <option value="medium">Spiro</option>
+                            <option value="large">HCL</option>
+                        </select>
+                     </div>
+                     <div class="ui-field-contain" style="left:12%; width:75%; margin-top:-25px;">
+                       <!-- <label for="select-native-fc" style="color:white;" style="opacity:0.6;">Company Location</label>-->
+                        <select name="select-native-fc" id="select-native-fc" >
+                            <option value="">Adderss</option>
+                            <option value="small">Porur</option>
+                            <option value="medium">Vadapalani</option>
+                            <option value="large">Saidapet</option>
+                            <option value="small">T.Nager</option>
+                            <option value="medium">Velachery</option>
+                            <option value="large">Mylapore</option>
+                        </select>
+                    </div>
+                    <div style="left:12%; width:75%;">
+                    	<a data-role="button" href="#home" role="button" style="background-color:#866649; color:white; margin-left:36px;width:86%">Submit</a>	
+                       
+                    </div>
+                    
+                </fieldset>
+            </form>
+	</div>
+    <!-- /content -->
+    
+    <div data-role="panel" data-display="push" data-theme="b" id="setedit">
+        <ul data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-right">Close</a></li>
+            <li><a href="#place_order1">Place Order</a></li>
+            <li><a href="#demo-page2">Track Order</a></li>
+            <li><a href="#Order_history">Order History</a></li>
+			<li><a href="#demo-page4">User Settings</a></li>
+       
+		</ul>
+    </div>
+  <!-- /panel -->
+</div>
+<!-------------------/Edit Setting Page------------------------------------>
+<!--------------------Cart Page-------------------------------------------->
+<div  data-role="page"  id="Cart_page" data-title="AtoZRestaurant">
+    <!-- /header -->
+    <div data-role="header" data-position="fixed" data-theme="b" style="background-color:#000; color:#FFF;">
+        <h1>Cart</h1>
+        <a href="#Cart" data-icon="bars" data-iconpos="notext">Menu</a>
+        <a href="#home" data-icon="back" data-iconpos="notext">Add</a>
+    </div>	
+    <!-- /header -->
+    <!--content--->
+  	<div class="content" style="margin-left:2px;margin-right:2px; background-image:url(images/gallery/b1.png);">
+        <p style="text-align:center; margin-top:2px; font-size:18px; color:white;">Order History List</p>
+           <ul data-role="listview" data-inset="true">
+               <li><a href="#" style="margin-top:21px;height:135px;">
+                    <img src="images/gallery/briyani.png" class="ui-li-thumb" style="max-width:30%;max-height:112px;">
+                    <h2 style="margin-top:-11px;">Biryani</h2>
+                    <h2>Price: &#2352; 120</h2>
+                    <!--<p>
+                        <a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini" href="#leftpanel3">Overlay</a>
+                        <input style="width:25px; height:25px;" type='text' name='quantity' value='0' class='qty' />
+                        <a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini" href="#leftpanel1">Reveal</a>
+                        <a class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini" href="#leftpanel2">Push</a>
+                    <p>-->
+                   <!--
+                    
+                    <button type="button" onClick="vvv();" class="ui-btn ui-btn-inline ui-btn-icon-top" style="background-color:white;">-</button>
+                    <button type="button" class="ui-btn ui-btn-inline ui-btn-icon-top" style="background-color:white;">p</button>
+                    <button type="button" class="ui-btn ui-btn-inline ui-btn-icon-top" style="background-color:white;">p</button>-->
+                    
+                    <!--<form  method='POST' action='#'>
+                        <input class="qtyminus" type="button" field="quantity" value="-" style="width:28px; height:25px;">
+                        <input style="width:25px; height:25px;" type='text' name='quantity' value='0' class='qty' />
+                        <input style="width:25px; height:25px;" type='button' value='+' class='qtyplus' field='quantity' />
+                    </form>-->
+                    <input name="number" pattern="[0-9]*" id="number-pattern" value="" type="number">
+                    <p style="font-size:18px;">Total: &#2352; 250</p>
+                  
+                    
+                </a><a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-b" style="border-bottom-left-radius:0px;background:none;">Delete</a></li>
+                <li><a href="#" style="height:135px;">
+                    <img src="images/gallery/meals.png" class="ui-li-thumb" style="max-width:30%;max-height:112px;">
+                    <h2 style="margin-top:-11px;">FullMeals</h2>
+                    <h2>Price: &#2352; 140</h2>
+                    
+                    <input name="number" pattern="[0-9]*" id="number-pattern" value="" type="number">
+                    <p style="font-size:18px;">Total: &#2352; 300</p>
+                </a><a href="#popupDialog1" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-b" style="border-top-left-radius:0px; border-bottom-left-radius:0px;background:none;">Delete</a></li>
+                <li><a href="#" style="height:135px;">
+                    <img src="images/gallery/parotta.png" class="ui-li-thumb" style="max-width:30%;max-height:112px;">
+                    <h2 style="margin-top:-11px;">Parotta</h2>
+                    <h2>Price: &#2352; 60</h2>
+                    <input name="number" pattern="[0-9]*" id="number-pattern" value="" type="number">
+                    <p style="font-size:18px;">Total: &#2352; 450</p>
+                </a><a href="#popupDialog2" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-b" style="border-top-left-radius:0px; background:none;">Delete</a></li>
+                   
+            </ul>
+            <div>
+                <a href="order_history.html" class="ui-btn ui-btn-inline" style="background-color:green; color:white;">Checkout</a>
+                <a href="#" class="ui-btn ui-btn-inline" style="background-color:red; color:white; float:right;">Continue</a>
+            </div>
+          
+    
+            <div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
+                <div data-role="header" data-theme="a">
+                <h1>Delete Page?</h1>
+                </div>
+                <div role="main" class="ui-content">
+                    <h3 class="ui-title" style="color:white;">Are you sure you want to delete this page?</h3>
+                <p>This action cannot be undone.</p>
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancel</a>
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Delete</a>
+                </div>
+            </div>
+            <div data-role="popup" id="popupDialog1" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
+                <div data-role="header" data-theme="a">
+                <h1>Delete Page?</h1>
+                </div>
+                <div role="main" class="ui-content">
+                    <h3 class="ui-title" style="color:white;">Are you sure you want to delete this page?</h3>
+                <p>This action cannot be undone.</p>
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancel</a>
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Delete</a>
+                </div>
+            </div>
+            <div data-role="popup" id="popupDialog2" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
+                <div data-role="header" data-theme="a">
+                <h1>Delete Page?</h1>
+                </div>
+                <div role="main" class="ui-content">
+                    <h3 class="ui-title" style="color:white;">Are you sure you want to delete this page?</h3>
+                <p>This action cannot be undone.</p>
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancel</a>
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Delete</a>
+                </div>
+            </div>
+    </div>
+    <!-- /content -->
+    
+    <div data-role="panel" data-display="push" data-theme="b" id="Cart">
+        <ul data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-right">Close</a></li>
+            <li><a href="#place_order1">Place Order</a></li>
+            <li><a href="#demo-page2">Track Order</a></li>
+            <li><a href="#Order_history">Order History</a></li>
+			<li><a href="#demo-page4">User Settings</a></li>
+       
+		</ul>
+    </div>
+  <!-- /panel -->
+</div>
+
+<!--------------------Cart Page-------------------------------------------->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.js"></script>
+<script>
+function menu_page() {
+	
+	<!--alert("welcome");-->
+	$.mobile.changePage("menu");
+    
+}
+</script>
+
+
+
+</body>
 </html>
